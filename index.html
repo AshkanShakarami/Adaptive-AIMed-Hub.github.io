@@ -29,26 +29,16 @@
       margin: auto;
       padding: 20px;
     }
-    .portrait {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background-size: cover;
-      margin: auto;
-    }
-    .bio {
+    .header-title {
+      margin-top: 100px; /* Increased margin-top to prevent overlap */
       text-align: center;
-      margin-top: 20px;
-    }
-    .social-icons a {
-      margin: 10px;
       font-size: 24px;
-      color: #0044cc;
+      font-weight: bold;
     }
     .section {
       background: white;
       padding: 30px;
-      margin: 20px 0;
+      margin: 40px 0;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -71,7 +61,25 @@
       background: #222;
       color: white;
     }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let navbarHeight = document.querySelector(".navbar").offsetHeight;
+      document.querySelectorAll("a[href^='#']").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          let target = document.querySelector(this.getAttribute("href"));
+          window.scrollTo({
+            top: target.offsetTop - navbarHeight - 20,
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -89,16 +97,7 @@
     </div>
   </nav>
   <div class="container">
-    <div class="bio">
-      <h2>Adaptive-AIMed Lab 🔬🧠</h2>
-      <h3>Adaptive Human-Level AI & Precision Medicine Laboratory</h3>
-      <div class="social-icons">
-        <a href="https://scholar.google.com/citations?user=9xkpGj4AAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i></a>
-        <a href="https://github.com/AshkanShakarami" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ashkan-shakarami-8237b4a1/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="https://www.researchgate.net/" target="_blank"><i class="fa fa-book"></i></a>
-      </div>
-    </div>
+    <h2 class="header-title">Adaptive Human-Level AI & Precision Medicine Laboratory</h2>
     <section id="about" class="section">
       <h2>About Us</h2>
       <p>Adaptive-AIMed Lab is dedicated to pioneering research in Human-Level AI and Precision Medicine.</p>
@@ -115,12 +114,12 @@
       <h2>Lab Directors</h2>
       <div class="members">
         <div class="member">
-          <img src="img/Ashkan_Shakarami.jpg" alt="Ashkan Shakarami">
+          <img src="img/Ashkan_Shakarami.jpg" alt="Dr. Ashkan Shakarami">
           <h3>Dr. Ashkan Shakarami</h3>
           <p>Founder, CEO & Director of AI Section<br>Principal Investigator in AI & Precision Medicine</p>
         </div>
         <div class="member">
-          <img src="img/Lorenzo_Nicole.jpg" alt="Lorenzo Nicolè">
+          <img src="img/Lorenzo_Nicole.jpg" alt="Dr. Lorenzo Nicolè">
           <h3>Dr. Lorenzo Nicolè</h3>
           <p>Director of Medicine Section<br>Principal Investigator in Pathology</p>
         </div>
@@ -128,7 +127,7 @@
     </section>
     <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:ashkan.shakarami.ai@gmail.com">ashkan.shakarami.ai@.com</a></p>
+      <p>Email: <a href="mailto:ashkan.shakarami@example.com">ashkan.shakarami@example.com</a></p>
     </section>
   </div>
   <footer>
