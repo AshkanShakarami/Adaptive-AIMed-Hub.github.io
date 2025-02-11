@@ -1,9 +1,8 @@
-title: "Adaptive-AIMed Lab"
-description: "Adaptive Human-Level AI & Precision Medicine Laboratory"
+theme: jekyll-theme-minimal
+title: Adaptive-AIMed Lab
+description: Adaptive Human-Level AI & Precision Medicine Laboratory
 url: "https://ashkanshakarami.github.io/Adaptive-AIMed-Lab.github.io"
-remote_theme: mistakes/minimal-mistakes
-plugins:
-  - jekyll-include-cache
+
 
 author:
   name: "Ashkan Shakarami"
