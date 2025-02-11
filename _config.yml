@@ -1,3 +1,22 @@
-theme: jekyll-theme-minimal
-title: Adaptive-AIMed Lab
-description: Adaptive Human-Level AI & Precision Medicine Laboratory
+title: "Adaptive-AIMed Lab"
+description: "Adaptive Human-Level AI & Precision Medicine Laboratory"
+url: "https://ashkanshakarami.github.io/Adaptive-AIMed-Lab.github.io"
+theme: minimal-mistakes-jekyll
+
+plugins:
+  - jekyll-include-cache
+
+author:
+  name: "Ashkan Shakarami"
+  avatar: "/assets/images/avatar.png" 
+  bio: "AI & Digital Pathology Researcher"
+  email: "your-email@example.com"
+
+social:
+  twitter: "your-twitter"
+  github: "AshkanShakarami"
+  linkedin: "your-linkedin"
+
+header:
+  image: "/assets/images/header.jpg"
+
