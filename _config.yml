@@ -1,18 +1,5 @@
 theme: jekyll-theme-minimal
 title: Adaptive-AIMed Lab
 description: Adaptive Human-Level AI & Precision Medicine Laboratory
-url: "https://ashkanshakarami.github.io/Adaptive-AIMed-Lab.github.io"
-
-
-author:
-  name: "Ashkan Shakarami"
-  avatar: "/assets/images/avatar.png" 
-  bio: "AI & Digital Pathology Researcher"
-  email: "ashkan.shakarami.ai@gmail.com"
-
-social:
-  twitter: "your-twitter"
-  github: "AshkanShakarami"
-  linkedin: "your-linkedin"
 
 
