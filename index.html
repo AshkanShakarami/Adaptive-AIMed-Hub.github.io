@@ -30,7 +30,7 @@
       padding: 20px;
     }
     .header-title {
-      margin-top: 100px; /* Increased margin-top to prevent overlap */
+      margin-top: 120px; /* Increased margin-top to prevent overlap */
       text-align: center;
       font-size: 24px;
       font-weight: bold;
@@ -48,6 +48,7 @@
       align-items: center;
       gap: 20px;
       text-align: center;
+      flex-wrap: wrap;
     }
     .member img {
       width: 150px;
@@ -63,6 +64,14 @@
     }
     html {
       scroll-behavior: smooth;
+    }
+    @media screen and (max-width: 768px) {
+      .navbar-fixed-top {
+        position: absolute;
+      }
+      .header-title {
+        margin-top: 150px;
+      }
     }
   </style>
   <script>
