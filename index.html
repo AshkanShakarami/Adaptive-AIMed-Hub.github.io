@@ -10,115 +10,70 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
- 
-<style>
-/* Navbar Styling */
-.navbar {
-  background-color: #0056b3;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.logo {
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* Navigation Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/* Mobile Menu Toggle */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-}
-
-/* Adjusting spacing between navbar & page content */
-.header-spacing {
-  margin-top: 100px; /* Ensures lab name is not covered */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: #0056b3;
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .nav-links a {
-    font-size: 20px;
-    padding: 10px;
-    display: block;
-  }
-}
-</style>
-
-<nav class="navbar">
-  <a href="#" class="logo">Adaptive-AIMed Lab 🧪🧠</a>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#members">Members</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<script>
-function toggleMenu() {
-  var menu = document.querySelector(".nav-links");
-  menu.classList.toggle("active");
-}
-</script>
-
-
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #0044cc;
+      border: none;
+    }
+    .navbar-brand, .navbar-nav li a {
+      color: white !important;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .header-title {
+      margin-top: 120px; /* Increased margin-top to prevent overlap */
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .section {
+      background: white;
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .members {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    .member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @media screen and (max-width: 768px) {
+      .navbar-fixed-top {
+        position: absolute;
+      }
+      .header-title {
+        margin-top: 150px;
+      }
+    }
+  </style>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       let navbarHeight = document.querySelector(".navbar").offsetHeight;
