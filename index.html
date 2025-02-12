@@ -41,21 +41,14 @@
       margin: 40px 0;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      scroll-margin-top: 80px; /* Ensures section titles are correctly positioned */
+      scroll-margin-top: 80px;
     }
-    .members {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      text-align: center;
-      flex-wrap: wrap;
+    .projects-list {
+      list-style: none;
+      padding: 0;
     }
-    .member img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
+    .projects-list li {
+      margin-bottom: 10px;
     }
     footer {
       text-align: center;
@@ -116,7 +109,17 @@
     </section>
     <section id="projects" class="section">
       <h2>Projects</h2>
-      <p>Our latest AI advancements in Digital Pathology, CAD systems, and healthcare innovation.</p>
+      <p>Our latest AI advancements in Digital Pathology, CAD systems, and healthcare innovation. Click on each project to learn more:</p>
+      <ul class="projects-list">
+        <li><a href="projects.html#velu">Velu: A Self-Adaptive Activation Function</a></li>
+        <li><a href="projects.html#defo">Defo: Stochastic Optimization</a></li>
+        <li><a href="projects.html#digital-histopathology">Digital Histopathology Twins: Quantum Vision Transformer in Histopathology for Cancer Detection</a></li>
+        <li><a href="projects.html#histocancer">AI-supported Cancer Diagnosis boosted by Multi-Attention Transformers: HistoCancer-CAD Network</a></li>
+        <li><a href="projects.html#histo-cell">Histo-Cell: Contextual Enhanced Segmentation of Histological Tissue Components</a></li>
+        <li><a href="projects.html#wsi-management">Efficient WSI Management: Streamlined Histopathology and Storage Optimization</a></li>
+        <li><a href="projects.html#tcnn">TCNN: A Transformer Convolutional Neural Network for artifact classification in whole slide images</a></li>
+      </ul>
+      <p><a href="projects.html" class="btn btn-primary">View All Projects</a></p>
     </section>
     <section id="members" class="section">
       <h2>Lab Directors</h2>
