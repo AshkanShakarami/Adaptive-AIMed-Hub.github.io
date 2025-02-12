@@ -30,7 +30,7 @@
       padding: 20px;
     }
     .header-title {
-      margin-top: 120px; /* Increased margin-top to prevent overlap */
+      margin-top: 120px;
       text-align: center;
       font-size: 24px;
       font-weight: bold;
@@ -41,6 +41,7 @@
       margin: 40px 0;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      scroll-margin-top: 80px; /* Ensures section titles are correctly positioned */
     }
     .members {
       display: flex;
@@ -74,21 +75,6 @@
       }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let navbarHeight = document.querySelector(".navbar").offsetHeight;
-      document.querySelectorAll("a[href^='#']").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          let target = document.querySelector(this.getAttribute("href"));
-          window.scrollTo({
-            top: target.offsetTop - navbarHeight - 20,
-            behavior: "smooth"
-          });
-        });
-      });
-    });
-  </script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -108,12 +94,25 @@
   <div class="container">
     <h2 class="header-title">Adaptive Human-Level AI & Precision Medicine Laboratory</h2>
     <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>Adaptive-AIMed Lab is dedicated to pioneering research in Human-Level AI and Precision Medicine.</p>
+      <h2>Big Picture</h2>
+      <p>Welcome to Adaptive-AIMed Lab. Here, we try to advance AI research with a focus on both fundamental innovations and real-world applications.</p>
+      <p>Our key research areas include:</p>
+      <ul>
+        <li><strong>AI & Computer Vision</strong> → Deep learning, representation learning, and interpretability.</li>
+        <li><strong>Medical CADs & AI in Healthcare</strong> → AI-driven decision support, histopathology, and autonomous diagnosis.</li>
+        <li><strong>Digital Patient Twins & Precision Medicine</strong> → AI-powered virtual patient models for personalized treatments.</li>
+        <li><strong>Quantum ML</strong> → Quantum-enhanced AI for high-dimensional learning and optimization.</li>
+      </ul>
+      <p>We aim to push the boundaries of Human-Level AI, developing adaptive, explainable, and robust AI systems for challenges in science, medicine, and beyond.</p>
+      <p>🚀 Innovating AI for intelligence, precision, and real-world impact.</p>
     </section>
     <section id="publications" class="section">
       <h2>Publications</h2>
-      <p>Explore our research works on <a href="https://scholar.google.com/citations?user=9xkpGj4AAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
+      <p>Explore our research works:</p>
+      <ul>
+        <li><a href="https://scholar.google.com/citations?user=9xkpGj4AAAAJ&hl=en" target="_blank">Ashkan Shakarami - Google Scholar</a></li>
+        <li><a href="https://scholar.google.com/citations?user=wK3QR3QAAAAJ&hl=en" target="_blank">Lorenzo Nicolè - Google Scholar</a></li>
+      </ul>
     </section>
     <section id="projects" class="section">
       <h2>Projects</h2>
@@ -142,7 +141,5 @@
   <footer>
     <p>&copy; 2025 Adaptive-AIMed Lab 🔬🧠 | Powered by Hugo Academic Theme</p>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
