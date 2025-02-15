@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+  
+  <script>
+  if (localStorage.pageViews) {
+    localStorage.pageViews = Number(localStorage.pageViews) + 1;
+  } else {
+    localStorage.pageViews = 1;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("viewCount").innerText = localStorage.pageViews;
+  });
+</script>
+
+
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f4f4f4;
@@ -211,5 +225,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <p>Page Views: <span id="viewCount">0</span></p>
 </body>
 </html>
